@@ -1,0 +1,18 @@
+package ro.ase.cts.g1099.recap.models;
+
+public class Banker {
+	
+	String name;
+	private int nextId = 1;
+	
+	
+	public Banker(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public BankAccount openAccount(AccountType type) {
+		
+	}
+
+}

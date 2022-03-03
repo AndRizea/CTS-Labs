@@ -1,0 +1,6 @@
+package ro.ase.cts.g1099.recap.models;
+
+public abstract class Account {
+
+	public abstract double getBalance();
+}

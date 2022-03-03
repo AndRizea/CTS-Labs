@@ -1,0 +1,17 @@
+package ro.ase.cts.g1099.recap.main;
+
+import ro.ase.cts.g1099.recap.models.AccountType;
+import ro.ase.cts.g1099.recap.models.BankAccount;
+import ro.ase.cts.g1099.recap.models.Banker;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Banker bank = new Banker("SDG");
+		BankAccount debitAccount = bank.openAccount(AccountType.SAVINGS);
+		BankAccount creditAccount = bank.openAccount(AccountType.CURRENT);
+
+	}
+
+}

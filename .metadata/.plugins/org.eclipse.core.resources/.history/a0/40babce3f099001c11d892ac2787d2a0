@@ -1,0 +1,36 @@
+package ro.ase.cts.g1099.recap.models;
+
+import ro.ase.cts.g1099.recap.exceptions.IllegalTransferException;
+
+public abstract class BankAccount extends Account{
+	
+	String iban;
+	double balance;
+	
+	@Override
+	public double getBalance() {
+		return this.balance;
+	}
+
+	@Override
+	public void deposit(double amount) {
+		if (amount < 0) {
+			throw new IllegalTransferException();
+		}
+		this.balance += amount;
+	}
+
+	@Override
+	public void withdraw(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void transfer(Account destination, double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

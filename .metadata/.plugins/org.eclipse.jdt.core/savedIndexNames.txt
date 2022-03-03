@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\AN III\SEM II\CTS\seminar\.metadata\.plugins\org.eclipse.jdt.core
+460213762.index
+3012494629.index
