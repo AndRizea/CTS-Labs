@@ -1,5 +1,0 @@
-package ro.ase.cts.g1099.exceptions;
-
-public class InsufficientFundsException {
-
-}

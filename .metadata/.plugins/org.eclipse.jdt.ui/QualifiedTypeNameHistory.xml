@@ -12,4 +12,6 @@
     <fullyQualifiedTypeName name="ro.ase.cts.g1099.recap.models.BankAccount"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ro.ase.cts.g1099.recap.models.AccountType"/>
+    <fullyQualifiedTypeName name="ro.ase.cts.g1099.clean.code.stage2.ProductType"/>
+    <fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
 </qualifiedTypeNameHistroy>
