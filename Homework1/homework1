@@ -3,6 +3,9 @@ Issues:
 		- there are meaningless white spaces
 		- in some parts of the code, the lines are not properly aligned
 		- useless comments should disappear
+	2. Naming conventions
+		- some variables and methods are not properly named (example: 'loan_value' should be 'loanValue' according lowerCamelCase principle)
+		
 		
 		
 		
