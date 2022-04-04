@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;ro.ase.cts.g1099.exceptions&apos; to &apos;ro.ase.cts.g1099.recap.exceptions&apos;&#x0D;&#x0A;- Original project: &apos;02_Week2&apos;&#x0D;&#x0A;- Original element: &apos;02_Week2/src/ro.ase.cts.g1099.exceptions&apos;&#x0D;&#x0A;- Renamed element: &apos;02_Week2/src/ro.ase.cts.g1099.recap.exceptions&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ro.ase.cts.g1099.exceptions&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ro.ase.cts.g1099.exceptions" name="ro.ase.cts.g1099.recap.exceptions" qualified="false" references="true" stamp="1646200207864" textual="false" version="1.0"/>
-</session>
