@@ -14,6 +14,16 @@ Issues:
 			* we should adapt also the constructor with arguments
 	5. Magic numbers
 		- here we should create variables which can store the constant values used in the code
-	6. After renaming, the 'toString()' method should have the @Override annotation		
+	6. After renaming, the 'toString()' method should have the @Override annotation
+	7. Single Responsibility Principle issue
+		- the Account class handles multiple responsibilities because of the additional methods created here ('getMonthlyRate' and 'calculate')
+		- solution: 
+			* place those methods in a separate class using an interface
+			* create an instance of the interface into the Account class in order to avoid dependencies on other classes
+			* the instance should be static (the method 'calculate' was defined in this way)
+			* create getters and setters for the interface's instance
+			
+			
+		
 		
 		
