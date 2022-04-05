@@ -41,10 +41,6 @@ public class Account {
 				+ accountType + ";";
 	}
 
-	public void print() {
-		System.out.println("This is an account");
-	}
-
 	public double getTotalFee(Account[] accounts) {
 		double totalFee = accountFunctions.getTotalFee(accounts);
 
