@@ -14,6 +14,6 @@ Issues:
 			* we should adapt also the constructor with arguments
 	5. Magic numbers
 		- here we should create variables which can store the constant values used in the code
-				
+	6. After renaming, the 'toString()' method should have the @Override annotation		
 		
 		

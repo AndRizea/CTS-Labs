@@ -29,6 +29,7 @@ public class Account {
 		}
 	}
 
+	@Override
 	public String toString() {
 		return "Loan: " + this.loanValue + "; rate: " + this.rate + "; days active:" + daysActive + "; Type: "
 				+ accountType + ";";
