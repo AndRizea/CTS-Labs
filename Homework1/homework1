@@ -34,6 +34,8 @@ Issues:
 		- for example, 'loan' method in the Account class should be named 'getLoanValue' because it represents a get method for the attributa 'loanValue'
 	14. Avoid shadowing
 		- use 'this' when referring to the attributes of a class inside that class
+	15. Methods and fields are accessible (there are public)
+		- we should make them private and provide accessing methods for them 
 	  
 		
 		

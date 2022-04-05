@@ -4,10 +4,10 @@ import ro.ase.acs.cts.homework1.exceptions.MissingLoanValueException;
 import ro.ase.acs.cts.homework1.interfaces.AccountFunctionsInterface;
 
 public class Account {
-	public double loanValue, rate;
-	public int daysActive;
-	public AccountType accountType;
-	public static AccountFunctionsInterface accountFunctions;
+	private double loanValue, rate;
+	private int daysActive;
+	private AccountType accountType;
+	private static AccountFunctionsInterface accountFunctions;
 
 	public double getLoanValue() {
 		System.out.println("The loan value is " + this.loanValue);
@@ -17,6 +17,22 @@ public class Account {
 	public double getRate() {
 		System.out.println("The rate is " + this.rate);
 		return this.rate;
+	}
+
+	public int getDaysActive() {
+		return daysActive;
+	}
+
+	public void setDaysActive(int daysActive) {
+		this.daysActive = daysActive;
+	}
+
+	public AccountType getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(AccountType accountType) {
+		this.accountType = accountType;
 	}
 
 	public double getMonthlyRate() {
@@ -47,7 +63,7 @@ public class Account {
 		return totalFee;
 	}
 
-	public Account(double loanValue, double rate, AccountType accountType) throws Exception {
+	public Account(double loanValue, double rate, AccountType accountType) {
 		if (loanValue < 0)
 			throw new MissingLoanValueException();
 

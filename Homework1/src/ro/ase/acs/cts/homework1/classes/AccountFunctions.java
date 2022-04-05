@@ -11,9 +11,10 @@ public class AccountFunctions implements AccountFunctionsInterface {
 	public double getTotalFee(Account[] accounts) {
 		double totalFee = 0.0;
 		for (Account account : accounts) {
-			if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
-				totalFee += BROKER_FEE
-						* this.computeAccountFee(account.loanValue, account.rate, account.daysActive, DAYS_IN_A_YEAR);
+			if (account.getAccountType() == AccountType.PREMIUM
+					|| account.getAccountType() == AccountType.SUPER_PREMIUM)
+				totalFee += BROKER_FEE * this.computeAccountFee(account.getLoanValue(), account.getRate(),
+						account.getDaysActive(), DAYS_IN_A_YEAR);
 		}
 		return totalFee;
 	}
