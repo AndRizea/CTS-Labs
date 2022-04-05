@@ -10,6 +10,15 @@ public class Account {
 	private AccountType accountType;
 	private static AccountFunctionsInterface accountFunctions;
 
+	public Account(double loanValue, double rate, AccountType accountType) {
+		if (loanValue < 0)
+			throw new MissingLoanValueException();
+
+		this.loanValue = loanValue;
+		this.rate = rate;
+		this.accountType = accountType;
+	}
+
 	public double getLoanValue() {
 		System.out.println("The loan value is " + this.loanValue);
 		return this.loanValue;
@@ -50,11 +59,6 @@ public class Account {
 		this.accountType = accountType;
 	}
 
-	public double getMonthlyRate() {
-		double monthlyRate = accountFunctions.getMonthlyRate(this.loanValue, this.rate);
-		return monthlyRate;
-	}
-
 	public void setValue(double loanValue) {
 		if (loanValue < 0)
 			throw new MissingLoanValueException();
@@ -76,18 +80,15 @@ public class Account {
 	}
 
 	public double getTotalFee(Account[] accounts) {
-		double totalFee = accountFunctions.getTotalFee(accounts);
+		double totalFee = accountFunctions.computeTotalFee(accounts);
 
 		return totalFee;
 	}
 
-	public Account(double loanValue, double rate, AccountType accountType) {
-		if (loanValue < 0)
-			throw new MissingLoanValueException();
+	public double getMonthlyRate() {
+		double monthlyRate = accountFunctions.getMonthlyRate(this.loanValue, this.rate);
 
-		this.loanValue = loanValue;
-		this.rate = rate;
-		this.accountType = accountType;
+		return monthlyRate;
 	}
 
 }

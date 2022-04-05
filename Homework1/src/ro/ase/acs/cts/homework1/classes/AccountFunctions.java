@@ -8,7 +8,7 @@ public class AccountFunctions implements AccountFunctionsInterface {
 	public static final int DAYS_IN_A_YEAR = 365;
 
 	@Override
-	public double getTotalFee(Account[] accounts) {
+	public double computeTotalFee(Account[] accounts) {
 		double totalFee = 0.0;
 		for (Account account : accounts) {
 			if (account.getAccountType() == AccountType.PREMIUM
