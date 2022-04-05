@@ -2,8 +2,8 @@ package ro.ase.acs.cts.homework1.classes;
 
 public class Account {
 	public double loanValue, rate;
-	public int daysActive, accountType;
-	public static final int STANDARD = 0, BUDGET = 1, PREMIUM = 2, SUPER_PREMIUM = 3;
+	public int daysActive;
+	AccountType accountType;
 
 	public double loan() {
 		System.out.println("The loan value is " + this.loanValue);
@@ -41,14 +41,14 @@ public class Account {
 		Account account;
 		for (int i = 0; i < accounts.length; i++) {
 			account = accounts[i];
-			if (account.accountType == Account.PREMIUM || account.accountType == Account.SUPER_PREMIUM)
+			if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
 				totalFee += .0125 * ( // 1.25% broker's fee
 				account.loanValue * Math.pow(account.rate, (account.daysActive / 365)) - account.loanValue); // interest-principal
 		}
 		return totalFee;
 	}
 
-	public Account(double value, double rate, int accountType) throws Exception {
+	public Account(double value, double rate, AccountType accountType) throws Exception {
 		if (value < 0)
 			throw new Exception();
 		else {
