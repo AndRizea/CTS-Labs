@@ -8,7 +8,7 @@ public class AccountFunctions implements AccountFunctionsInterface {
 	public static final int DAYS_IN_A_YEAR = 365;
 	
 	@Override
-	public double calculate(Account[] accounts)  {
+	public double getTotalFee(Account[] accounts)  {
 		double totalFee = 0.0;
 		Account account;
 		for (int i = 0; i < accounts.length; i++) {

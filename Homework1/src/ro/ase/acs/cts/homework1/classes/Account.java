@@ -46,7 +46,7 @@ public class Account {
 	}
 
 	public double getTotalFee(Account[] accounts) {
-		double totalFee = accountFunctions.calculate(accounts);
+		double totalFee = accountFunctions.getTotalFee(accounts);
 
 		return totalFee;
 	}

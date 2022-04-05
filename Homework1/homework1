@@ -23,7 +23,7 @@ Issues:
 			* the instance should be static (the method 'calculate' was defined in this way)
 			* create getters and setters for the interface's instance
 			
-			
+	8. The method 'calculate' from the interface should have a more meaningful name	
 		
 		
 		
