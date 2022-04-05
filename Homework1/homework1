@@ -24,6 +24,11 @@ Issues:
 			* create getters and setters for the interface's instance
 			
 	8. The method 'calculate' from the interface should have a more meaningful name	
+	9. 'getTotalFee' method could be simplified
+		- optimise the for loop using a for each
+		- create new methods and variables in order to make the totalFee formula more understandable ('explain yourself in code')
+		
+		
 		
 		
 		
