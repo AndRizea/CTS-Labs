@@ -28,6 +28,7 @@ Issues:
 		- optimise the for loop using a for each
 		- create new methods and variables in order to make the totalFee formula more understandable ('explain yourself in code')
 	10. The function 'print()' in the Account class has no powerful functionality
+	11. Useless else blocks in if validations
 		
 		
 		

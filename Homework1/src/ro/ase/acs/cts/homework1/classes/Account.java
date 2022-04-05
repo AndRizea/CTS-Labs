@@ -26,9 +26,8 @@ public class Account {
 	public void setValue(double value) throws Exception {
 		if (value < 0)
 			throw new Exception();
-		else {
-			loanValue = value;
-		}
+
+		loanValue = value;
 	}
 
 	public static void setAccountFunctions(AccountFunctionsInterface accountFunctions) {
@@ -50,9 +49,8 @@ public class Account {
 	public Account(double value, double rate, AccountType accountType) throws Exception {
 		if (value < 0)
 			throw new Exception();
-		else {
-			loanValue = value;
-		}
+
+		loanValue = value;
 		this.rate = rate;
 		this.accountType = accountType;
 	}
