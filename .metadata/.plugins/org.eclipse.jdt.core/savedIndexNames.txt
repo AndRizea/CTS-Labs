@@ -4,7 +4,6 @@ INDEX VERSION 1.131+D:\AN III\SEM II\CTS\seminar\.metadata\.plugins\org.eclipse.
 1219137231.index
 1660894727.index
 460213762.index
-913210262.index
 3052562590.index
 960271658.index
 3012494629.index
