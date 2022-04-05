@@ -12,6 +12,8 @@ Issues:
 			* before, the accountType attribute was of type int and now it should be of type AccountType (the enum is called 'AccountType')
 			* we should adapt the conditions written in the 'calculate' method
 			* we should adapt also the constructor with arguments
-			
+	5. Magic numbers
+		- here we should create variables which can store the constant values used in the code
+				
 		
 		
