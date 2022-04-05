@@ -1,5 +1,6 @@
 package ro.ase.acs.cts.homework1.classes;
 
+import ro.ase.acs.cts.homework1.exceptions.InappropriateValueException;
 import ro.ase.acs.cts.homework1.exceptions.MissingLoanValueException;
 import ro.ase.acs.cts.homework1.interfaces.AccountFunctionsInterface;
 
@@ -19,11 +20,25 @@ public class Account {
 		return this.rate;
 	}
 
+	public void setRate(double rate) {
+		if (rate < 0)
+			throw new InappropriateValueException();
+
+		this.rate = rate;
+	}
+
+	public static AccountFunctionsInterface getAccountFunctions() {
+		return accountFunctions;
+	}
+
 	public int getDaysActive() {
 		return daysActive;
 	}
 
 	public void setDaysActive(int daysActive) {
+		if (daysActive < 0)
+			throw new InappropriateValueException();
+
 		this.daysActive = daysActive;
 	}
 
@@ -48,6 +63,9 @@ public class Account {
 	}
 
 	public static void setAccountFunctions(AccountFunctionsInterface accountFunctions) {
+		if (accountFunctions == null)
+			throw new InappropriateValueException();
+
 		Account.accountFunctions = accountFunctions;
 	}
 

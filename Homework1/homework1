@@ -35,7 +35,8 @@ Issues:
 	14. Avoid shadowing
 		- use 'this' when referring to the attributes of a class inside that class
 	15. Methods and fields are accessible (there are public)
-		- we should make them private and provide accessing methods for them 
+		- we should make them private and provide accessing methods for them
+	16. Validate the newly generated access methods 
 	  
 		
 		
