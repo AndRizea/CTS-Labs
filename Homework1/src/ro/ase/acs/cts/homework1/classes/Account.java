@@ -1,5 +1,6 @@
 package ro.ase.acs.cts.homework1.classes;
 
+import ro.ase.acs.cts.homework1.exceptions.MissingAccountValueException;
 import ro.ase.acs.cts.homework1.interfaces.AccountFunctionsInterface;
 
 public class Account {
@@ -23,9 +24,9 @@ public class Account {
 		return monthlyRate;
 	}
 
-	public void setValue(double value) throws Exception {
+	public void setValue(double value) {
 		if (value < 0)
-			throw new Exception();
+			throw new MissingAccountValueException();
 
 		loanValue = value;
 	}
@@ -48,7 +49,7 @@ public class Account {
 
 	public Account(double value, double rate, AccountType accountType) throws Exception {
 		if (value < 0)
-			throw new Exception();
+			throw new MissingAccountValueException();
 
 		loanValue = value;
 		this.rate = rate;
