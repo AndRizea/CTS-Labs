@@ -29,7 +29,12 @@ Issues:
 		- create new methods and variables in order to make the totalFee formula more understandable ('explain yourself in code', 'functions should be small')
 	10. The function 'print()' in the Account class has no powerful functionality
 	11. Useless else blocks in if validations
-	12. Generic exception used for validating 
+	12. Generic exception used for validating
+	13. Some methods does not have suggestive names
+		- for example, 'loan' method in the Account class should be named 'getLoanValue' because it represents a get method for the attributa 'loanValue'
+	14. Avoid shadowing
+		- use 'this' when referring to the attributes of a class inside that class
+	  
 		
 		
 		

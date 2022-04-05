@@ -1,6 +1,6 @@
 package ro.ase.acs.cts.homework1.classes;
 
-import ro.ase.acs.cts.homework1.exceptions.MissingAccountValueException;
+import ro.ase.acs.cts.homework1.exceptions.MissingLoanValueException;
 import ro.ase.acs.cts.homework1.interfaces.AccountFunctionsInterface;
 
 public class Account {
@@ -9,13 +9,13 @@ public class Account {
 	public AccountType accountType;
 	public static AccountFunctionsInterface accountFunctions;
 
-	public double loan() {
+	public double getLoanValue() {
 		System.out.println("The loan value is " + this.loanValue);
-		return loanValue;
+		return this.loanValue;
 	}
 
 	public double getRate() {
-		System.out.println("The rate is " + rate);
+		System.out.println("The rate is " + this.rate);
 		return this.rate;
 	}
 
@@ -24,11 +24,11 @@ public class Account {
 		return monthlyRate;
 	}
 
-	public void setValue(double value) {
-		if (value < 0)
-			throw new MissingAccountValueException();
+	public void setValue(double loanValue) {
+		if (loanValue < 0)
+			throw new MissingLoanValueException();
 
-		loanValue = value;
+		this.loanValue = loanValue;
 	}
 
 	public static void setAccountFunctions(AccountFunctionsInterface accountFunctions) {
@@ -37,8 +37,8 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Loan: " + this.loanValue + "; rate: " + this.rate + "; days active:" + daysActive + "; Type: "
-				+ accountType + ";";
+		return "Loan: " + this.loanValue + "; rate: " + this.rate + "; days active:" + this.daysActive + "; Type: "
+				+ this.accountType + ";";
 	}
 
 	public double getTotalFee(Account[] accounts) {
@@ -47,11 +47,11 @@ public class Account {
 		return totalFee;
 	}
 
-	public Account(double value, double rate, AccountType accountType) throws Exception {
-		if (value < 0)
-			throw new MissingAccountValueException();
+	public Account(double loanValue, double rate, AccountType accountType) throws Exception {
+		if (loanValue < 0)
+			throw new MissingLoanValueException();
 
-		loanValue = value;
+		this.loanValue = loanValue;
 		this.rate = rate;
 		this.accountType = accountType;
 	}

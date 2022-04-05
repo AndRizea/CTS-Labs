@@ -13,7 +13,7 @@ public class AccountFunctions implements AccountFunctionsInterface {
 		for (Account account : accounts) {
 			if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
 				totalFee += BROKER_FEE
-						* this.getAccountFeeRate(account.loanValue, account.rate, account.daysActive, DAYS_IN_A_YEAR);
+						* this.computeAccountFee(account.loanValue, account.rate, account.daysActive, DAYS_IN_A_YEAR);
 		}
 		return totalFee;
 	}
@@ -23,20 +23,20 @@ public class AccountFunctions implements AccountFunctionsInterface {
 		return loanValue * rate;
 	}
 
-	public double getActiveDaysRatio(int activeDays, int daysInAYear) {
+	public double computeActiveDaysRatio(int activeDays, int daysInAYear) {
 		double activeDaysRatio = activeDays / daysInAYear;
 
 		return activeDaysRatio;
 	}
 
-	public double getFeeRate(double rate, int activeDays, int daysInAYear) {
-		double totalFeeRate = Math.pow(rate, this.getActiveDaysRatio(activeDays, daysInAYear));
+	public double computeCompoundInterest(double rate, int activeDays, int daysInAYear) {
+		double totalFeeRate = Math.pow(rate, this.computeActiveDaysRatio(activeDays, daysInAYear));
 
 		return totalFeeRate;
 	}
 
-	public double getAccountFeeRate(double loanValue, double rate, int activeDays, int daysInAYear) {
-		double accountFeeRate = loanValue * (this.getFeeRate(rate, activeDays, daysInAYear) - 1);
+	public double computeAccountFee(double loanValue, double rate, int activeDays, int daysInAYear) {
+		double accountFeeRate = loanValue * (this.computeCompoundInterest(rate, activeDays, daysInAYear) - 1);
 
 		return accountFeeRate;
 	}
