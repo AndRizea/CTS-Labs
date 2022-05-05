@@ -1,13 +1,10 @@
 INDEX VERSION 1.131+D:\AN III\SEM II\CTS\seminar\.metadata\.plugins\org.eclipse.jdt.core
-3240084638.index
 3592977823.index
 3897339400.index
 1219137231.index
 1660894727.index
 460213762.index
 913210262.index
-2942773804.index
 3052562590.index
 960271658.index
-2447236621.index
 3012494629.index

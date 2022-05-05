@@ -1,0 +1,45 @@
+Issues:
+	1. Code formatting 
+		- there are meaningless white spaces
+		- in some parts of the code, the lines are not properly aligned
+		- useless comments should disappear
+	2. Naming conventions
+		- some variables and methods are not properly named (example: 'loan_value' should be 'loanValue' according lowerCamelCase principle)
+	3. Unused declared variables (int vb, int temp)	
+	4. Variables STANDARD, BUDGET, PREMIUM, SUPER_PREMIUM should be stored with the help of an enum.
+		- we will create an enum containing the previously mentioned options
+		- for this reason, we should modify some parts of the code: 
+			* before, the accountType attribute was of type int and now it should be of type AccountType (the enum is called 'AccountType')
+			* we should adapt the conditions written in the 'calculate' method
+			* we should adapt also the constructor with arguments
+	5. Magic numbers
+		- here we should create variables which can store the constant values used in the code
+	6. After renaming, the 'toString()' method should have the @Override annotation
+	7. Single Responsibility Principle issue
+		- the Account class handles multiple responsibilities because of the additional methods created here ('getMonthlyRate' and 'calculate')
+		- solution: 
+			* place those methods in a separate class using an interface
+			* create an instance of the interface into the Account class in order to avoid dependencies on other classes
+			* the instance should be static (the method 'calculate' was defined in this way)
+			* create getters and setters for the interface's instance
+			
+	8. The method 'calculate' from the interface should have a more meaningful name	
+	9. 'computeTotalFee' method could be simplified
+		- optimise the for loop using a for each
+		- create new methods and variables in order to make the totalFee formula more understandable ('explain yourself in code', 'functions should be small')
+	10. The function 'print()' in the Account class has no powerful functionality
+	11. Useless else blocks in if validations
+	12. Generic exception used for validating
+	13. Some methods does not have suggestive names
+		- for example, 'loan' method in the Account class should be named 'getLoanValue' because it represents a get method for the attribute 'loanValue'
+	14. Avoid shadowing
+		- use 'this' when referring to the attributes of a class inside that class
+	15. Methods and fields are accessible (they are public)
+		- we should make them private and provide accessing methods for them
+	16. Validate the newly generated access methods 
+	  
+		
+		
+		
+		
+		
